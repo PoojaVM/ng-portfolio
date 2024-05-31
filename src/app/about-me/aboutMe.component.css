@@ -1,0 +1,36 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+
+  @keyframes scaleUp {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+  }
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-picture-section {
+    margin-top: 20px;
+  }
+
+.animated-picture {
+    animation: scaleUp 2s ease-in-out;
+}
+
+.profile-picture {
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.6);
+}

@@ -1,7 +1,32 @@
 <div class="main">
-  <app-header />
-  <app-content />
+
+  <div class="header-container">
+    <div class="left-container">
+        Pooja Mule
+    </div>
+    <!-- @for (item of headers; track item.title) {
+        <li>{{ item.title }}</li>
+        } @empty {
+        <li>There are no items.</li>
+    } -->
+    <div class="right-container">
+        <nav class="right-container">
+            <div *ngFor="let header of headers" class="right-container">
+                <span class="header-title" [routerLink]="" [fragment]="header.id" (click)="scrollToSection(header.id)">
+                    {{header.title}}
+                </span>
+            </div>
+        </nav>
+    </div> 
+  </div>
+
+  <div class="body-container">
+    <about-me id="about-me" />
+    <work-experience id="work-experience" />
+    <projects id="projects" />
+    <skills id="skills" />
+    <contact-me id="contact-me" />
+  </div>
 </div>
 
-
-<!-- <router-outlet /> -->
+<router-outlet />

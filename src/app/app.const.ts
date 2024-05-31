@@ -1,4 +1,4 @@
-export const Header = [
+export const HEADERS = [
     {
         id: 'about-me',
         title: 'About Me'
